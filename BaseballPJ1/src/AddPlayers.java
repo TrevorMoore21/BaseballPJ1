@@ -4,9 +4,21 @@ import java.util.Scanner;
 public class AddPlayers
 	{
 
+		
+		//mlb.get(hitterIndex)
+		
+		
+		
 		static ArrayList<Hitters> mlb = new ArrayList<Hitters>();
 		static ArrayList<Pitchers> cheese = new ArrayList<Pitchers>();
 		static Scanner userStringInput = new Scanner(System.in);
+		
+		
+		static int hitterIndex = 0;
+		static int pitcherIndex = 0;
+		
+		
+		
 		
 		public static void newHitters()
 		{
@@ -35,25 +47,27 @@ public class AddPlayers
 			System.out.println("Would you like to play as Bryce Harper, Mike Trout, Joey Votto, Pete Rose, or Babe Ruth?");
 			String chosenHitter = userStringInput.nextLine();
 			
+			
+			
 			if (chosenHitter.equals("Bryce Harper") || chosenHitter.equals("bryce harper"))
 				{
-					chosenHitter = mlb.get(0);
+					hitterIndex = 0;
 				}
 			else if (chosenHitter.equals("Mike Trout") || chosenHitter.equals("mike trout"))
 				{
-					chosenHitter = mlb.get(1);
+					hitterIndex = 1;
 				}
 			else if (chosenHitter.equals("Joey Votto") || chosenHitter.equals("joey votto"))
 				{
-					chosenHitter = mlb.get(2);
+					hitterIndex = 2;
 				}
 			else if (chosenHitter.equals("Pete Rose") || chosenHitter.equals("pete rose"))
 				{
-					chosenHitter = mlb.get(3);
+					hitterIndex = 3;
 				}
 			else if (chosenHitter.equals("Babe Ruth") || chosenHitter.equals("babe ruth"))
 				{
-					chosenHitter = mlb.get(4);
+					hitterIndex = 4;
 				}
 			else
 				{
@@ -74,27 +88,27 @@ public class AddPlayers
 			
 			if (chosenPitcher.equals("Nolan Ryan") || chosenPitcher.equals("nolan ryan"))
 				{
-					chosenPitcher = cheese.get(0);
+					pitcherIndex = 0;
 				}
 			else if (chosenPitcher.equals("Greg Maddux") || chosenPitcher.equals("greg maddux"))
 				{
-					chosenPitcher = cheese.get(1);
+					pitcherIndex = 1;
 				}
 			else if (chosenPitcher.equals("Randy Johnson") || chosenPitcher.equals("randy johnson"))
 				{
-					chosenPitcher = cheese.get(2);
+					pitcherIndex = 2;
 				}
 			else if (chosenPitcher.equals("Roger Clemens") || chosenPitcher.equals("roger clemens"))
 				{
-					chosenPitcher = cheese.get(3);
+					pitcherIndex = 3;
 				}
-			else if (chosenPitcher.equals("Jacob deGrom") || chosenPitcher.equals("jacob degrom") || chosenPitcher.equals("Jacob Degrom"));
+			else if (chosenPitcher.equals("Jacob deGrom") || chosenPitcher.equals("jacob degrom") || chosenPitcher.equals("Jacob Degrom"))
 				{
-					chosenPitcher = cheese.get(4);
+					pitcherIndex = 4;
 				}
-			else
+				else
 				{
-					System.out.println("command not recognised");
+					System.out.println("command not recognised"); 
 				}
 		
 			
@@ -107,7 +121,7 @@ public class AddPlayers
 			System.out.println("Would you like to have an at bat with your hitter?");
 			String answer = userStringInput.nextLine();
 			
-			double battingAA = mlb.get
+			double battingAA = mlb.get(hitterIndex).get() 
 			
 			
 			
