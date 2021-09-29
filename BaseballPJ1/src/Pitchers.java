@@ -7,7 +7,7 @@ public class Pitchers
 		private int gamesPlayed; 
 		private double inningsPitched;
 		private int battersFaced;
-		private int hitsAgainst;
+		private int hitsAllowed;
 		private int walks;
 		private int strikeOut;
 		private int hitByPitch;
@@ -19,7 +19,7 @@ public class Pitchers
 			gamesPlayed = g;
 			inningsPitched = i;
 			battersFaced = bf;
-			hitsAgainst = h; 
+			hitsAllowed = h; 
 			walks = w;
 			strikeOut = s;
 			hitByPitch = hbp;
@@ -75,14 +75,14 @@ public class Pitchers
 				this.battersFaced = battersFaced;
 			}
 
-		public int getHitsAgainst()
+		public int getHitsAllowed()
 			{
-				return hitsAgainst;
+				return hitsAllowed;
 			}
 
-		public void setHitsAgainst(int hitsAgainst)
+		public void setHitsAllowed(int hitsAllowed)
 			{
-				this.hitsAgainst = hitsAgainst;
+				this.hitsAllowed = hitsAllowed;
 			}
 
 		public int getWalks()

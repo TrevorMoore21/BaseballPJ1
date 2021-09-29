@@ -1,5 +1,7 @@
 import java.util.ArrayList;
 import java.util.Scanner;
+import java.text.DecimalFormat;
+
 
 public class AddPlayers
 	{
@@ -30,7 +32,7 @@ public class AddPlayers
 		}
 		
 		
-		public static void newPitcher()
+		public static void newPitchers()
 		{
 			cheese.add(new Pitchers("Nolan", "Ryan", 807, 5386.0, 22575, 3929, 2795, 5714, 158));
 			cheese.add(new Pitchers("Greg", "Maddux", 744, 5008.1,20421, 4726, 999, 3371, 137));
@@ -82,7 +84,7 @@ public class AddPlayers
 		public static void userPitcher()
 		{
 			
-			System.out.println("Would you like to face Rolan Ryan, Greg Maddux, Randy Johnson, Roger Clemens, or Jacob deGrom?");
+			System.out.println("Would you like to face Nolan Ryan, Greg Maddux, Randy Johnson, Roger Clemens, or Jacob deGrom?");
 			String chosenPitcher = userStringInput.nextLine();
 			
 			
@@ -110,7 +112,9 @@ public class AddPlayers
 				{
 					System.out.println("command not recognised"); 
 				}
-		
+		  
+			
+			
 			
 		}
 
@@ -118,10 +122,20 @@ public class AddPlayers
 		public static void playGame()
 		{
 			
-			System.out.println("Would you like to have an at bat with your hitter?");
-			String answer = userStringInput.nextLine();
+			double battingAv =(double) mlb.get(hitterIndex).getHits() / (double) mlb.get(hitterIndex).getAtBats(); 
+			double battingAvA = ((double) cheese.get(pitcherIndex).getHitsAllowed()) / ((double) cheese.get(pitcherIndex).getBattersFaced() - (double) cheese.get(pitcherIndex).getWalks() - (double) cheese.get(pitcherIndex).getHitByPitch());
 			
-			double battingAA = mlb.get(hitterIndex).get() 
+	
+			 DecimalFormat d = new DecimalFormat(".000");
+            
+             
+			System.out.println("Your hitter's batting average is: " + (d.format(battingAv)));
+			System.out.println("Your pitcher's batting average against is: " + (d.format(battingAvA)));
+			
+			
+			
+			System.out.println("Would you like your hitter to have 1000 AtBats against your pitcher?");
+			String answer = userStringInput.nextLine();
 			
 			
 			
@@ -129,7 +143,14 @@ public class AddPlayers
 				{
 					
 					
-					
+					for (int i = 0; i <= 1000; i ++)
+						{
+							
+							
+							
+							
+							
+						}
 					
 					
 					
