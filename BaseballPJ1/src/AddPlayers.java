@@ -129,8 +129,8 @@ public class AddPlayers
 			 DecimalFormat d = new DecimalFormat(".000");
             
              
-			System.out.println("Your hitter's batting average is: " + (d.format(battingAv)));
-			System.out.println("Your pitcher's batting average against is: " + (d.format(battingAvA)));
+			System.out.println("Your hitter's career batting average is: " + (d.format(battingAv)));
+			System.out.println("Your pitcher's career batting average against is: " + (d.format(battingAvA)));
 			
 			
 			
@@ -143,13 +143,13 @@ public class AddPlayers
 				{
 					
 							
-							double newBattingAv = ((double) mlb.get(hitterIndex).getHits() + 300) / ((double) mlb.get(hitterIndex).getAtBats() + 1);
+							double newBattingAv = ((double) mlb.get(hitterIndex).getHits() + 300) / ((double) mlb.get(hitterIndex).getAtBats() + 1000);
 							
 							double newBattingAvA = ((double) cheese.get(pitcherIndex).getHitsAllowed() + 300) / ((double) (cheese.get(pitcherIndex).getBattersFaced() + 1000) - (double) (cheese.get(pitcherIndex).getWalks() + 135) - (double) (cheese.get(pitcherIndex).getHitByPitch() + 12));
 							
 							
-							System.out.println("Your hitter's new batting average is: " + (d.format(newBattingAv)));
-							System.out.println("Your pitcher's new batting average against is: " + (d.format(newBattingAvA)));
+							System.out.println("Your hitter's new career batting average is: " + (d.format(newBattingAv)));
+							System.out.println("Your pitcher's new career batting average against is: " + (d.format(newBattingAvA)));
 					
 				}
 	
