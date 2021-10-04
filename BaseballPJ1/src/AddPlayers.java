@@ -122,7 +122,7 @@ public class AddPlayers
 		public static void playGame()
 		{
 			
-			double battingAv =(double) mlb.get(hitterIndex).getHits() / (double) mlb.get(hitterIndex).getAtBats(); 
+			double battingAv = (double) mlb.get(hitterIndex).getHits() / (double) mlb.get(hitterIndex).getAtBats(); 
 			double battingAvA = ((double) cheese.get(pitcherIndex).getHitsAllowed()) / ((double) cheese.get(pitcherIndex).getBattersFaced() - (double) cheese.get(pitcherIndex).getWalks() - (double) cheese.get(pitcherIndex).getHitByPitch());
 			
 	
@@ -142,26 +142,17 @@ public class AddPlayers
 			if(answer.equals("Yes") || answer.equals("yes"))
 				{
 					
-					
-					for (int i = 0; i <= 1000; i ++)
-						{
+							
+							double newBattingAv = ((double) mlb.get(hitterIndex).getHits() + 300) / ((double) mlb.get(hitterIndex).getAtBats() + 1);
+							
+							double newBattingAvA = ((double) cheese.get(pitcherIndex).getHitsAllowed() + 300) / ((double) (cheese.get(pitcherIndex).getBattersFaced() + 1000) - (double) (cheese.get(pitcherIndex).getWalks() + 135) - (double) (cheese.get(pitcherIndex).getHitByPitch() + 12));
 							
 							
-							
-							
-							
-						}
-					
-					
+							System.out.println("Your hitter's new batting average is: " + (d.format(newBattingAv)));
+							System.out.println("Your pitcher's new batting average against is: " + (d.format(newBattingAvA)));
 					
 				}
-			
-			
-			
-			
-			
-			
-			
+	
 			else if(answer.equals("No") || answer.equals("no"))
 				{
 					System.out.println("Go Away");
