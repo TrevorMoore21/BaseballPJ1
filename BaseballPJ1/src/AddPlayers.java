@@ -1,7 +1,7 @@
 import java.util.ArrayList;
 import java.util.Scanner;
 
-import jdk.internal.misc.FileSystemOption;
+//import jdk.internal.misc.FileSystemOption;
 
 import java.text.DecimalFormat;
 
@@ -145,10 +145,17 @@ public class AddPlayers
 			if(answer.equals("Yes") || answer.equals("yes"))
 				{
 					
+							double newHits = ((double) mlb.get(hitterIndex).getHits() / (double) mlb.get(hitterIndex).getAtBats()) * 100;
+					
+							double newHitByPitch = ((double) cheese.get(pitcherIndex).getHitByPitch() / (double) cheese.get(pitcherIndex).getBattersFaced() * 1000);
 							
-							double newBattingAv = ((double) mlb.get(hitterIndex).getHits() + 300) / ((double) mlb.get(hitterIndex).getAtBats() + 1000);
 							
-							double newBattingAvA = ((double) cheese.get(pitcherIndex).getHitsAllowed() + 300) / ((double) (cheese.get(pitcherIndex).getBattersFaced() + 1000) - (double) (cheese.get(pitcherIndex).getWalks() + 135) - (double) (cheese.get(pitcherIndex).getHitByPitch() + 12));
+							System.out.println("newHitByPitch is " + newHitByPitch);
+							
+							
+							double newBattingAv = ((double) mlb.get(hitterIndex).getHits() + newHits) / ((double) mlb.get(hitterIndex).getAtBats() + 1000);
+							
+							double newBattingAvA = ((double) cheese.get(pitcherIndex).getHitsAllowed() + newHits) / ((double) (cheese.get(pitcherIndex).getBattersFaced() + 1000) - (double) (cheese.get(pitcherIndex).getWalks() + 135) - (double) (cheese.get(pitcherIndex).getHitByPitch() + 12));
 							
 							
 							System.out.println("Your hitter's new career batting average is: " + (d.format(newBattingAv)));
@@ -173,10 +180,6 @@ public class AddPlayers
 			
 			
 		}
-		
-		
-		
-		
 			
 		
 		
