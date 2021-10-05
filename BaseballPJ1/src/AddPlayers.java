@@ -1,5 +1,8 @@
 import java.util.ArrayList;
 import java.util.Scanner;
+
+import jdk.internal.misc.FileSystemOption;
+
 import java.text.DecimalFormat;
 
 
@@ -151,6 +154,10 @@ public class AddPlayers
 							System.out.println("Your hitter's new career batting average is: " + (d.format(newBattingAv)));
 							System.out.println("Your pitcher's new career batting average against is: " + (d.format(newBattingAvA)));
 					
+							
+							System.out.println("What's up Mr. McGuire");
+							
+							
 				}
 	
 			else if(answer.equals("No") || answer.equals("no"))
@@ -162,6 +169,15 @@ public class AddPlayers
 					System.out.println("command not recognised");
 				}
 				
+			
+			
+			
 		}
+		
+		
+		
+		
+			
+		
 		
 	}
