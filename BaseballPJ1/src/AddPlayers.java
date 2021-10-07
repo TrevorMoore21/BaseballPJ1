@@ -151,7 +151,8 @@ public class AddPlayers
 			if(answer.equals("Yes") || answer.equals("yes"))
 				{
 					
-							double newHits = ((((battingAv + battingAvA)/2) - rando) * 1000);
+							double newHits = ((((battingAv + battingAvA)/2) - rando));
+							newHits = newHits * 1000;
 					
 							double newWalks = (((double) cheese.get(pitcherIndex).getWalks() / (double) cheese.get(pitcherIndex).getBattersFaced()) * 1000);
 							
