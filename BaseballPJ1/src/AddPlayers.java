@@ -1,4 +1,5 @@
 import java.util.ArrayList;
+import java.util.Random;
 import java.util.Scanner;
 
 //import jdk.internal.misc.FileSystemOption;
@@ -130,9 +131,12 @@ public class AddPlayers
 			double battingAv = (double) mlb.get(hitterIndex).getHits() / (double) mlb.get(hitterIndex).getAtBats(); 
 			double battingAvA = ((double) cheese.get(pitcherIndex).getHitsAllowed()) / ((double) cheese.get(pitcherIndex).getBattersFaced() - (double) cheese.get(pitcherIndex).getWalks() - (double) cheese.get(pitcherIndex).getHitByPitch());
 			
-	
-			 DecimalFormat d = new DecimalFormat(".000");
-            
+			Random generator = new Random();
+			double rando = ((generator.nextDouble()* .010)+0.015);
+			
+			
+			 DecimalFormat d = new DecimalFormat("0.000");
+
              
 			System.out.println("Your hitter's career batting average is: " + (d.format(battingAv)));
 			System.out.println("Your pitcher's career batting average against is: " + (d.format(battingAvA)));
@@ -147,7 +151,7 @@ public class AddPlayers
 			if(answer.equals("Yes") || answer.equals("yes"))
 				{
 					
-							double newHits = ((((battingAv + battingAvA)/2) - 0.01) * 1000);
+							double newHits = ((((battingAv + battingAvA)/2) - rando) * 1000);
 					
 							double newWalks = (((double) cheese.get(pitcherIndex).getWalks() / (double) cheese.get(pitcherIndex).getBattersFaced()) * 1000);
 							
@@ -165,7 +169,7 @@ public class AddPlayers
 							System.out.println("Your pitcher's new career batting average against is: " + (d.format(newBattingAvA)));
 					
 							
-							System.out.println("What's up Mr. McGuire. I like Chipotle"); 
+							System.out.println("What's up Mr. McGuire?"); 
 							
 							
 				}
@@ -184,6 +188,27 @@ public class AddPlayers
 			
 		}
 			
-		
+		public static void asciiBaseball()
+		{
+            System.out.println("                                            _--_     dMb");
+            System.out.println("                                         __(._  )   d0P");
+            System.out.println("                                           <  (D)  .MP");
+            System.out.println("                                        .~ \\ /~```M-.");
+            System.out.println("                                       .~    V    Mo_ \\");
+            System.out.println();
+            System.out.println("                                        (   (___. {:)-./");
+            System.out.println("-------============((((}{)               ~._____.(:}");
+            System.out.println("                                           /    .M\\");
+            System.out.println("                                          /        \\");
+            System.out.println("                                          |    /\\   |");
+            System.out.println("                                          /   /  \\   \\");
+            System.out.println("                                         /   /    \\   \\");
+            System.out.println("                                         \\__/      \\__/");
+            System.out.println("                                         / /        | |");
+            System.out.println("                                        .^V^.      .^V^.");
+            System.out.println("                                         +-+        +-+");
+          
+            
+		}
 		
 	}

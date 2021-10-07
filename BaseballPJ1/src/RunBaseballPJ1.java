@@ -9,7 +9,7 @@ public class RunBaseballPJ1
 				AddPlayers.userHitter();
 				AddPlayers.userPitcher();
 				AddPlayers.playGame();
-				
+				AddPlayers.asciiBaseball();
 				
 				
 			}
