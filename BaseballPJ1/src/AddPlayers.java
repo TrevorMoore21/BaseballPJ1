@@ -170,7 +170,7 @@ public class AddPlayers
 							System.out.println("Your pitcher's new career batting average against is: " + (d.format(newBattingAvA)));
 					
 							
-							System.out.println("What's up Mr. McGuire?"); 
+							System.out.println("What's up Mr. McGuire? Howdy"); 
 							
 							
 				}
