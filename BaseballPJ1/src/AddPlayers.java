@@ -140,9 +140,6 @@ public class AddPlayers
              
 			System.out.println("Your hitter's career batting average is: " + (d.format(battingAv)));
 			System.out.println("Your pitcher's career batting average against is: " + (d.format(battingAvA)));
-			
-			
-			
 			System.out.println("Would you like your hitter to have 1000 AtBats against your pitcher?");
 			String answer = userStringInput.nextLine();
 			
